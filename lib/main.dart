@@ -17,8 +17,8 @@ main() async {
   await Firebase.initializeApp(options: AppFirebaseOptions.currentPlatform);
 
   await FirebaseRemoteConfig.instance.setConfigSettings(RemoteConfigSettings(
-    fetchTimeout: const Duration(seconds: 9),
-    minimumFetchInterval: const Duration(seconds: 9),
+    fetchTimeout: const Duration(seconds: 20),
+    minimumFetchInterval: const Duration(seconds: 20),
   ));
 
   await FirebaseRemoteConfig.instance.fetchAndActivate();
